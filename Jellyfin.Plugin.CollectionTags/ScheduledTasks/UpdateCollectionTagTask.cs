@@ -2,53 +2,46 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Jellyfin.Plugin.Template.LibaryExamples;
-using Jellyfin.Plugin.Template.UserExamples;
+using Jellyfin.Plugin.CollectionTags.LibaryExamples;
 using MediaBrowser.Model.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace Jellyfin.Plugin.Template.ScheduledTasks
+namespace Jellyfin.Plugin.CollectionTags.ScheduledTasks
 {
     /// <inheritdoc/>
-    public class ExampleScheduledTask : IScheduledTask
+    public class UpdateCollectionTagTask : IScheduledTask
     {
-        private readonly ILogger<ExampleScheduledTask> _logger;
+        private readonly ILogger<UpdateCollectionTagTask> _logger;
         private readonly LibaryInfo _libaryInfo;
-        private readonly UserInfo _userInfo;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExampleScheduledTask"/> class.
+        /// Initializes a new instance of the <see cref="UpdateCollectionTagTask"/> class.
         /// </summary>
         /// <param name="logger">Instance of the <see cref="ILogger{ExampleScheduledTask}"/> interface.</param>
         /// <param name="libaryInfo">Instance of the <see cref="LibaryInfo"/> interface.</param>
-        /// <param name="userInfo">Instance of the <see cref="UserInfo"/> interface.</param>
-        public ExampleScheduledTask(ILogger<ExampleScheduledTask> logger, LibaryInfo libaryInfo, UserInfo userInfo)
+        public UpdateCollectionTagTask(ILogger<UpdateCollectionTagTask> logger, LibaryInfo libaryInfo)
         {
             _logger = logger;
             _libaryInfo = libaryInfo;
-            _userInfo = userInfo;
         }
 
         /// <inheritdoc/>
-        public string Name => "ExampleTask";
+        public string Name => "Collection Tag Update Task";
 
         /// <inheritdoc/>
-        public string Key => "TemplateExampleTask";
+        public string Key => "CollectionTagUpdateTask";
 
         /// <inheritdoc/>
-        public string Description => "A Description what the Tasks is doing";
+        public string Description => "Update die Tags anhand der Collection";
 
         /// <inheritdoc/>
-        public string Category => "Template Plugin";
+        public string Category => "Collection Tags";
 
         /// <inheritdoc/>
         public async Task ExecuteAsync(IProgress<double> progress, CancellationToken cancellationToken)
         {
-            // Forc Execute using:
-            //  _taskManager.Execute<ExampleScheduledTask>();
             _logger.LogInformation("Task - Start: {Name}", Name);
             await _libaryInfo.Run().ConfigureAwait(false);
-            await _userInfo.Run().ConfigureAwait(false);
             _logger.LogInformation("Task - Complete: {Name}", Name);
         }
 
@@ -56,10 +49,6 @@ namespace Jellyfin.Plugin.Template.ScheduledTasks
         public IEnumerable<TaskTriggerInfo> GetDefaultTriggers()
         {
             return [new TaskTriggerInfo
-                {
-                    Type = TaskTriggerInfo.TriggerStartup
-                },
-                new TaskTriggerInfo
                 {
                     Type = TaskTriggerInfo.TriggerInterval,
                     IntervalTicks = TimeSpan.FromHours(6).Ticks

@@ -8,7 +8,7 @@ using MediaBrowser.Controller.Entities.Movies;
 using MediaBrowser.Controller.Library;
 using Microsoft.Extensions.Logging;
 
-namespace Jellyfin.Plugin.Template.LibaryExamples
+namespace Jellyfin.Plugin.CollectionTags.LibaryExamples
 {
     /// <summary>
     /// Info Class.

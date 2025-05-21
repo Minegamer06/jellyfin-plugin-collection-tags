@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Jellyfin.Plugin.Template.LibaryExamples;
-using Jellyfin.Plugin.Template.UserExamples;
+using Jellyfin.Plugin.CollectionTags.LibaryExamples;
 using MediaBrowser.Controller;
 using MediaBrowser.Controller.Plugins;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Jellyfin.Plugin.Template
+namespace Jellyfin.Plugin.CollectionTags
 {
     /// <summary>
     /// Register Plugin Services.
@@ -20,7 +19,6 @@ namespace Jellyfin.Plugin.Template
         public void RegisterServices(IServiceCollection serviceCollection, IServerApplicationHost applicationHost)
         {
             serviceCollection.AddSingleton<LibaryInfo>();
-            serviceCollection.AddSingleton<UserInfo>();
         }
     }
 }

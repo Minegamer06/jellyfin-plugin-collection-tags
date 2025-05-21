@@ -15,6 +15,7 @@ public class PluginConfiguration : BasePluginConfiguration
         UpdateOnLibraryScan = false;
         CollectionsToTag = string.Empty;
         TagAllCollections = false;
+        TagPrefix = "#CollectionTags";
     }
 
     /// <summary>
@@ -31,4 +32,9 @@ public class PluginConfiguration : BasePluginConfiguration
     /// Gets or sets a value specifying for which collections tags should be created.
     /// </summary>
     public string CollectionsToTag { get; set; }
+
+    /// <summary>
+    /// Gets or sets a value indicating the prefix for the tags.
+    /// </summary>
+    public string TagPrefix { get; set; }
 }

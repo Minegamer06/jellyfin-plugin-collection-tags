@@ -199,7 +199,7 @@ namespace Jellyfin.Plugin.CollectionTags.ScheduledTasks
             {
                 // GetRecursiveChildren() finds all items considered part of this BoxSet, potentially including items in sub-folders if applicable.
                 List<BaseItem> itemsInCollection = collection.GetRecursiveChildren().ToList();
-                if (itemsInCollection.Count == 0)
+                if (itemsInCollection.Count != 0)
                 {
                     itemsByCollection.Add(collection, itemsInCollection);
                     _logger.LogDebug("Collection '{CollectionName}' (ID: {CollectionId}) contains {ItemCount} items.", collection.Name, collection.Id, itemsInCollection.Count);

@@ -1,16 +1,19 @@
 ---
-name: "Template"
-guid: "eb5d7894-8eef-4b36-aa6f-5d124e828ce1"
+name: "Collection Tags"
+guid: "190D5E0E-FA7A-430A-B739-4E9D1D2363D7"
 version: "0.1.0.0"
 targetAbi: "10.10.7.0"
 framework: "net8.0"
-overview: "Short description about your plugin"
+overview: "Erstellt Tags basierend auf Collections z.B. um Inhalte sperren für User zu erstellen."
 description: >
-  This is a longer description that can span more than one
-  line and include details about your plugin.
+  Mit Collection Tags werden automatisch Tags erzeugt, die den Namen der Jellyfin Collections 
+  entsprechen. Da Collections in Jellyfin im Grunde Ordner für Serien und Filme sind, können diese 
+  automatisch erzeugten Tags dazu genutzt werden, Inhalte für bestimmte Benutzergruppen zu 
+  sperren oder freizugeben. Dies ermöglicht eine flexiblere und fein abgestimmte Verwaltung der 
+  Medieninhalte.
 category: "General"
 owner: "Minegamer06"
 artifacts:
-- "Jellyfin.Plugin.Template.dll"
+- "Jellyfin.Plugin.CollectionTags.dll"
 changelog: >
-  changelog
+  - Initiale Version: Plugin erstellt, und sollte funktionieren.

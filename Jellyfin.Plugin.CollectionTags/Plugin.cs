@@ -29,7 +29,7 @@ public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
     public override string Name => "CollectionTags";
 
     /// <inheritdoc />
-    public override Guid Id => Guid.Parse("eb5d7894-8eef-4b36-aa6f-5d124e828ce1");
+    public override Guid Id => Guid.Parse("190D5E0E-FA7A-430A-B739-4E9D1D2363D7");
 
     /// <summary>
     /// Gets the current plugin instance.

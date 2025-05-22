@@ -7,14 +7,6 @@
     "owner": "Minegamer06",
     "category": "General",
     "versions": [
-      {
-        "version": "0.1.0.1",
-        "changelog": "- Update manifest.json\n- Update release.yml\n- Update manifest.json\n- Update build.yaml and manifest.json for release version 0.1.0.1\n- Update PluginConfiguration.cs\n- Update release.yml\n- Update Jellyfin.Plugin.CollectionTags.csproj\n- Bedinug korrigiert\n- Erster Build Test\n- Now the Plugin should work\n- Config Erweitert\n- Nichtbenötigt dinge aus Template entfernt, Template in CollectionTags umbennatn PluginConfiguration.cs angepasst\n- Initial commit",
-        "targetAbi": "10.10.0.0",
-        "sourceUrl": "https://github.com/Minegamer06/jellyfin-plugin-collection-tags/releases/download/v/collection-tags_.zip",
-        "checksum": "c83ab27190a3da34837a710b42d3b8b2",
-        "timestamp": "2025-05-22T01:02:02Z"
-      }
     ]
   }
 ]

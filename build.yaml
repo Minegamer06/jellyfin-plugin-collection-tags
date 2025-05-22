@@ -13,4 +13,4 @@ owner: "Minegamer06"
 artifacts:
   - "Jellyfin.Plugin.CollectionTags.dll"
 changelog: >-
-  ["Update manifest.json","Update release.yml","Update manifest.json","Update build.yaml and manifest.json for release version 0.1.0.1","Update PluginConfiguration.cs","Update release.yml","Update Jellyfin.Plugin.CollectionTags.csproj","Bedinug korrigiert","Erster Build Test","Now the Plugin should work","Config Erweitert","Nichtbenötigt dinge aus Template entfernt, Template in CollectionTags umbennatn PluginConfiguration.cs angepasst","Initial commit"]
+  ["Update manifest.json","Update release.yml","Update build.yaml and manifest.json for release version 0.1.0.1","Update manifest.json","Update release.yml","Update manifest.json","Update build.yaml and manifest.json for release version 0.1.0.1","Update PluginConfiguration.cs","Update release.yml","Update Jellyfin.Plugin.CollectionTags.csproj","Bedinug korrigiert","Erster Build Test","Now the Plugin should work","Config Erweitert","Nichtbenötigt dinge aus Template entfernt, Template in CollectionTags umbennatn PluginConfiguration.cs angepasst","Initial commit"]

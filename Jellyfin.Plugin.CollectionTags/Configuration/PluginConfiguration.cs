@@ -15,7 +15,7 @@ public class PluginConfiguration : BasePluginConfiguration
         UpdateOnLibraryScan = false;
         CollectionsToTag = string.Empty;
         TagAllCollections = false;
-        TagPrefix = "#CollectionTags";
+        TagPrefix = "#CollectionTags_";
     }
 
     /// <summary>

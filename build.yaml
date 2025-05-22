@@ -1,7 +1,7 @@
 ---
 name: "Collection Tags"
 guid: "190D5E0E-FA7A-430A-B739-4E9D1D2363D7"
-version: "0.1.0.0"
+version: "0.1.0.1"
 targetAbi: "10.10.7.0"
 framework: "net8.0"
 overview: "Erstellt Tags basierend auf Collections z.B. um Inhalte sperren für User zu erstellen."

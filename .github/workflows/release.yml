@@ -94,7 +94,7 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add build.yaml manifest.json
           git commit -m "Update build.yaml and manifest.json for release version $VERSION"
-          git push origin HEAD:main
+          git push origin HEAD:master
 
       - name: Create Tag
         env:

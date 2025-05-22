@@ -71,7 +71,7 @@ jobs:
       - name: Update `manifest.json`
         run: |
           timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          sourceUrl="https://github.com/${{ github.repository_owner }}/releases/download/v$VERSION/${{ github.event.repository.name }}_$VERSION.zip"
+          sourceUrl="https://github.com/${{ github.repository }}/releases/download/v${{ steps.vars.outputs.version }}/collection-tags_${{ steps.vars.outputs.version }}.zip"
           formatted_changelog=$(echo "$FORMATTED_CHANGELOG" | jq -r '.[]' | sed 's/^/- /')
           jq --arg strippedversion "$VERSION" \
             --arg changelog "$formatted_changelog" \

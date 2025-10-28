@@ -8,6 +8,14 @@
     "category": "General",
     "versions": [
       {
+        "version": "0.2.0.0",
+        "changelog": "- Update release workflow for .NET and target ABI\n- Bump version from 0.1.0.1 to 0.2.0.0\n- Update build.yaml and Directory.Build.props for version 0.2.0.0 and target framework net9.0\n- Update target framework to net9.0 and package references to version 10.11.0\n- Update README.md",
+        "targetAbi": "10.10.0.0",
+        "sourceUrl": "https://github.com/Minegamer06/jellyfin-plugin-collection-tags/releases/download/v0.2.0.0/collection-tags_0.2.0.0.zip",
+        "checksum": "2369f3fe6046fe58fec83971fef13913",
+        "timestamp": "2025-10-28T09:57:03Z"
+      },
+      {
         "version": "0.1.0.1",
         "changelog": "- Update manifest.json\n- Update release.yml\n- Update build.yaml and manifest.json for release version 0.1.0.1\n- Update manifest.json\n- Update release.yml\n- Update manifest.json\n- Update build.yaml and manifest.json for release version 0.1.0.1\n- Update PluginConfiguration.cs\n- Update release.yml\n- Update Jellyfin.Plugin.CollectionTags.csproj\n- Bedinug korrigiert\n- Erster Build Test\n- Now the Plugin should work\n- Config Erweitert\n- Nichtbenötigt dinge aus Template entfernt, Template in CollectionTags umbennatn PluginConfiguration.cs angepasst\n- Initial commit",
         "targetAbi": "10.10.0.0",

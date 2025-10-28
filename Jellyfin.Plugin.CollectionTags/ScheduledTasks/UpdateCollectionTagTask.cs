@@ -290,7 +290,7 @@ namespace Jellyfin.Plugin.CollectionTags.ScheduledTasks
         public IEnumerable<TaskTriggerInfo> GetDefaultTriggers()
         {
             // Default trigger: run every 6 hours.
-            return [new TaskTriggerInfo { Type = TaskTriggerInfo.TriggerInterval, IntervalTicks = TimeSpan.FromHours(6).Ticks }];
+            return [new TaskTriggerInfo { Type = TaskTriggerInfoType.IntervalTrigger, IntervalTicks = TimeSpan.FromHours(6).Ticks }];
         }
     }
 }

@@ -42,7 +42,7 @@ jobs:
         run: |
           yq eval '
             .version = strenv(VERSION) |
-            .targetAbi = "10.10.0.0" |
+            .targetAbi = "10.11.0.0" |
             .changelog = strenv(FORMATTED_CHANGELOG)
           ' build.yaml > build.tmp.yaml && mv build.tmp.yaml build.yaml
 
@@ -54,13 +54,13 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 9.0.x
 
       - name: Build Jellyfin Plugin
         uses: oddstr13/jellyfin-plugin-repository-manager@v0.5.0
         id: jprm
         with:
-          dotnet-target: net8.0
+          dotnet-target: net9.0
 
       - name: Generate Release Checksums
         run: |
